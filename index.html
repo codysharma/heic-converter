@@ -18,7 +18,7 @@
     <script>
         async function convert() {
             const input = document.getElementById("fileInput");
-            const files = [...input.files];
+            const files = [...input.files].filter(f => /\.(heic|heif)$/i.test(f.name));
             const progress = document.getElementById("progress");
             const results = document.getElementById("results");
             results.innerHTML = "";
